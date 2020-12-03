@@ -65,7 +65,7 @@ jobs:
 
     - name: Install esp-idf
       run: |
-        cd esp && ./install.sh
+        cd esp/esp-idf/ && ./install.sh
         . /esp/esp-idf/export.sh
         alias get_idf='. /esp/esp-idf/export.sh'
         
