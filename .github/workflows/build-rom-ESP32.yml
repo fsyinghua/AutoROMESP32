@@ -73,7 +73,7 @@ jobs:
     - name: hello-world build
       id: hello-world
       run: |
-        cd esp
+        cd /esp
         cp -r $IDF_PATH/examples/get-started/hello_world .
         cd /esp/hello_world
 
@@ -82,7 +82,6 @@ jobs:
       id: compile
       run: |
         cd /esp/hello_world
-        
         idf.py build
         echo "::set-output name=status::success"
         echo "ESP32" > DEVICE_NAME
